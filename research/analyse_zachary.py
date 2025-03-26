@@ -11,3 +11,4 @@ G = nx.karate_club_graph()
 results = network_analysis(G, None)
 print(results.to_string())
 
+

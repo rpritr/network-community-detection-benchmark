@@ -3,9 +3,10 @@ import networkx as nx
 from common.common import open_txt, draw_network
 from common.community import contract_communities, get_community_colors, filter_components
 from common.imports import *
-
+from cdlib.algorithms import leiden
 # import graph
-df = open_txt("../data/FakeNews-2010_Retweets_Graph.txt")
+#df = open_txt("../data/FakeNews-2010_Retweets_Graph.txt")
+df = open_txt("../data/citation/cit-Patents.txt", "	")
 G = nx.from_pandas_edgelist(df, source='Node1', target='Node2', edge_attr='Weight', create_using=nx.DiGraph())
 
 communities_total = list(community.louvain_communities(G))

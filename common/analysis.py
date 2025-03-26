@@ -5,7 +5,8 @@ from networkx.algorithms.community import greedy_modularity_communities
 from common.common import draw_graph, draw_dendrogram, stats, open_txt
 import pandas as pd
 import time
-
+from common.statistics import get_stats
+from common.community import visualise_louvain
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities
 # Returns: Average density, Average degree, Average clustering coefficient
@@ -92,37 +93,77 @@ def evaluate(method_name, func, is_cdlib=False, *args, **kwargs):
             "Avg. degree:": degree,
             "Avg. clustering:": clustering,
             "Execution Time (s)": exec_time,
-
         }
 
-# Function for network analysis of community algorithms
-# Input: Graph G or file path
-# Returns: DataFrame of comparision results
-def network_analysis(graph, file):
 
+def open_graph_directed(graph=None, file=None, sep="\t", skip=4):
+    if file:
+        # Preberemo datoteko in preverimo njeno strukturo
+        #df = pd.read_csv(file, sep=sep, header=None, names=["Node1", "Node2", "Weight"])
+        df = pd.read_csv(file, sep="\s+", header=None, skiprows=skip, names=["Node1", "Node2"])
+
+        print(df.head())  # Prikaže prvih 5 vrstic
+        print(df.info())  # Prikaže strukturo podatkov (stolpci, tipi podatkov)
+        # Preverimo, ali stolpec 'Weight' obstaja (če ne, ga odstranimo iz grafa)
+        if "Weight" in df.columns:
+            G = nx.from_pandas_edgelist(df, source="Node1", target="Node2", edge_attr="Weight",
+                                        create_using=nx.DiGraph())
+        else:
+            G = nx.from_pandas_edgelist(df, source="Node1", target="Node2", create_using=nx.DiGraph())
+
+    elif graph:
+        G = graph
+    else:
+        raise ValueError("Noben graf ali datoteka ni podana!")
+
+    # Preverimo osnovne informacije o grafu
+    print(f"Prebran graf: {len(G.nodes())} vozlišč, {len(G.edges())} povezav")
+    return G
+
+def open_graph(graph, file, sep = '\t'):
     # import data if file path is set
     if file:
-        df = open_txt(file)
+        df = open_txt(file, sep)
         # create graph
         G = nx.from_pandas_edgelist(df, source='Node1', target='Node2', edge_attr='Weight')
 
     # read graph if graph is set
     if graph:
         G = graph
+    return G
+# Function for network analysis of community algorithms
+# Input: Graph G or file path
+# Returns: DataFrame of comparision results
+def network_analysis(graph, file, sep = '\t', directed = False):
+
+    # import data if file path is set
+    if file:
+        df = open_txt(file, sep)
+        # create graph
+        if not directed:
+            G = nx.from_pandas_edgelist(df, source='Node1', target='Node2', edge_attr='Weight')
+        else:
+            G = nx.from_pandas_edgelist(df, source='Node1', target='Node2',
+                                        edge_attr='Weight', create_using=nx.DiGraph())
+    # read graph if graph is set
+    if graph:
+        G = graph
     # Print network statistics
     stats(G)
-
+    get_stats(G)
+    #visualise_louvain(G)
     # results frame
     results = []
 
-    # results.append(evaluate("Louvain", nx.community.louvain_communities, False, G))
-    # results.append(evaluate("Label Propagation", nx.community.label_propagation_communities, False, G))
-    # results.append(evaluate("Fast Label Propagation", nx.community.fast_label_propagation_communities, False, G))
-    # results.append(evaluate("Leiden", leiden, True, G))
+    results.append(evaluate("Louvain", nx.community.louvain_communities, False, G))
+    if not G.is_directed():
+        results.append(evaluate("Label Propagation", nx.community.label_propagation_communities, False, G))
+    results.append(evaluate("Fast Label Propagation", nx.community.fast_label_propagation_communities, False, G))
+    results.append(evaluate("Leiden", leiden, True, G))
     results.append(evaluate("Infomap", infomap, True, G))
-    results.append(evaluate("Walktrap", walktrap, True, G))
-    results.append(evaluate("Greedy Modularity", greedy_modularity_communities, False, G))
-    results.append(evaluate("Girvan Newman", nx.community.girvan_newman, False, G))
+    #results.append(evaluate("Walktrap", walktrap, True, G))
+    #results.append(evaluate("Greedy Modularity", greedy_modularity_communities, False, G))
+    #results.append(evaluate("Girvan Newman", nx.community.girvan_newman, False, G))
 
     # convert into DataFrame and export to CSV
     df_results = pd.DataFrame(results)

@@ -5,11 +5,11 @@ from common.imports import *
 # Function for reading graph from txt
 # Input: txt path
 # Returns: df datatype for CSV
-def open_txt(path):
+def open_txt(path, sep):
     # Preberemo datoteko brez določanja števila stolpcev
     df = pd.read_csv(
         path,
-        sep='\t', # seperator in CSV file
+        sep=sep, # seperator in CSV file
         comment="#",  # ignore comments in file
         header=None  # no header in file
     )
