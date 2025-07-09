@@ -5,7 +5,7 @@ from common.generator import generate_random_network
 from common.statistics import get_stats
 from common.community import visualise_louvain
 G = generate_random_network(15)
-#draw_graph(G, "ER povezan graf z več povezavami", node_color="lightblue", with_labels=False, node_size=40)
+draw_graph(G, "ER povezan graf z več povezavami", node_color="lightblue", with_labels=False, node_size=40)
 
 # do analysis on random network
 results = network_analysis(G, None)
