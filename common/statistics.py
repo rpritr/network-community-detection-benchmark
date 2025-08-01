@@ -1,7 +1,7 @@
 from common.imports import *
 import networkx as nx
 import matplotlib.pyplot as plt
-from common.analysis import draw_graph
+
 from common.generator import generate_random_network
 
 # Ustvarimo graf

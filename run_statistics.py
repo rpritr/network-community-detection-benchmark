@@ -1,11 +1,5 @@
-import pandas as pd
-import numpy as np
-import networkx as nx
-from common.analysis import evaluate, network_analysis
-import matplotlib.pyplot as plt
-import seaborn as sns
-from common.generator import generate_random_network
-
+from common.imports import *
+from common.globals import *
 # set number of iterations
 num_iterations = 100
 
@@ -20,7 +14,7 @@ for i in range(num_iterations):
     #results = network_analysis(G, None)
     #results = network_analysis(None, "../../data/neuro/average_connectivity_condition_1.txt", " ")
     #results = network_analysis(None, "../../data/FakeNews-2010_Retweets_Graph.txt")
-    results = network_analysis(None, "../../data/eu/email-EuAll.txt", directed=True)
+    results = network_analysis(None, "./data/eu/email-EuAll.txt", directed=True)
     #results = network_analysis(None, "../../data/citation/cit-Patents.txt")
 
     all_results.append(results)
@@ -104,18 +98,13 @@ plt.ylabel("Koeficient gručenja")  #
 plt.xticks(rotation=45)
 plt.savefig("avg_clustering.jpg", dpi=300, bbox_inches="tight")
 
-
-
-
-
-
-# 4️⃣ Boxplot - analiza izvajalnega časa
+# plot violin chart - communities : exectution time
 plt.figure(figsize=(12, 6))
 sns.violinplot(data=df_results, x="Method", y="Execution Time (s)", palette="muted")
 plt.title("Primerjava časa izvajanja med algoritmi")
 plt.xlabel("Algoritem")  # Lastno ime za x-os
 plt.ylabel("Čas izvajanja (s)")  #
 plt.xticks(rotation=45)
-plt.yscale("log")  # Log skala zaradi velikih razlik v času izvajanja
+plt.yscale("log")  # log scale for better visualisation
 plt.savefig("exec_time.jpg", dpi=300, bbox_inches="tight")
 

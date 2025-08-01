@@ -1,12 +1,6 @@
 from common.imports import *
-from cdlib.algorithms import leiden, infomap, spectral, walktrap, girvan_newman,eigenvector, ga, markov_clustering, paris, spectral
-
-from networkx.algorithms.community import greedy_modularity_communities
-from common.common import draw_graph, draw_dendrogram, stats, open_txt
-import pandas as pd
-import time
-from common.statistics import get_stats
-from common.community import visualise_louvain
+from common.globals import *
+from common.common import open_txt
 
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities

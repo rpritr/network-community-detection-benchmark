@@ -1,6 +1,6 @@
+from common.globals import *
 from common.imports import *
 import community as community_louvain  # Louvain metoda
-from common.analysis import draw_graph
 
 # Function for filtering components
 # Input: components of graph, limit

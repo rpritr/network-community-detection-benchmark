@@ -5,7 +5,7 @@ import seaborn as sns
 from pymcdm.methods import TOPSIS
 from IPython.display import display
 
-# Tvoje podatke naložimo v DataFrame
+# load data in Dataframe
 df = pd.DataFrame({
     "Network": ["Zachary", "Random", "Twitter", "Citation", "EU"],
     "Nodes": [34, 150, 14103, 3774768, 265214],
@@ -14,13 +14,13 @@ df = pd.DataFrame({
     "Label Propagation": [0.00031, 0.00148, 0.35838, 2291.03314, 4.70192],
     "Fast Label Propagation": [0.00007, 0.00007, 0.00016, 0.00231, 0.00095],
     "Leiden": [0.00569, 0.00807, 0.22418, 436.17358, 4.98428],
-    "Infomap": [0.00226, 0.00819, 1.80458, np.nan, 109.10740],  # Manjkajoče vrednosti zamenjane z np.nan
+    "Infomap": [0.00226, 0.00819, 1.80458, np.nan, 109.10740],  # missing replaced by  np.nan
     "Walktrap": [0.00095, 0.00165, 0.83856, np.nan, np.nan],
     "Greedy Modularity": [0.00195, 0.01188, 5.31351, np.nan, np.nan],
     "Girvan Newman": [0.00006, 0.00007, np.nan, np.nan, np.nan],
 })
 
-# Normalizacija časa izvajanja na vozlišče in povezavo
+# normalize data for vertices and edges
 for algo in ["Louvain", "Label Propagation", "Fast Label Propagation", "Leiden", "Infomap", "Walktrap", "Greedy Modularity", "Girvan Newman"]:
     df[f"{algo} per Node"] = df[algo] / df["Nodes"]
     df[f"{algo} per Edge"] = df[algo] / df["Edges"]

@@ -1,6 +1,5 @@
-import networkx as nx
-
 from common.imports import *
+from common.globals import *
 
 # Function for reading graph from txt
 # Input: txt path

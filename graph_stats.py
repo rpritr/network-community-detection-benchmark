@@ -1,11 +1,10 @@
 from common.imports import *
-import networkx as nx
-import matplotlib.pyplot as plt
-from common.analysis import draw_graph
+from common.globals import *
+
 from common.generator import generate_random_network
 from common.analysis import open_graph_directed
 # read graph
-G = open_graph_directed(None, "../../data/citation/cit-Patents.txt")
+G = open_graph_directed(None, "./data/citation/cit-Patents.txt")
 
 # check if directed
 if not nx.is_directed(G):
@@ -24,16 +23,16 @@ num_edges = len(G.edges())  # edges
 density = nx.density(G)  # density
 
 # WCC
-wcc = list(max(nx.weakly_connected_components(G), key=len))  # Pretvorimo v seznam
+wcc = list(max(nx.weakly_connected_components(G), key=len))  # convert to list
 
-print("Največja WCC vsebuje vozlišč:", len(wcc))  # Mora biti 224832
+print("Največja WCC vsebuje vozlišč:", len(wcc))
 
 # filter WCC
 largest_wcc_subgraph = G.subgraph(wcc).copy()
 num_nodes_wcc = largest_wcc_subgraph.number_of_nodes()
 num_edges_wcc = largest_wcc_subgraph.number_of_edges()
 
-print("Število povezav v največji WCC (pravilno filtrirano):", num_edges_wcc)  # Mora biti 395270
+print("Število povezav v največji WCC (pravilno filtrirano):", num_edges_wcc)
 
 # SCC
 largest_scc_nodes = max(nx.strongly_connected_components(G), key=len)
@@ -48,7 +47,7 @@ avg_clustering = nx.average_clustering(G)
 try:
     graph_diameter = nx.diameter(G)
 except nx.NetworkXError:
-    graph_diameter = "N/A"  # Če graf ni povezan, premer ni definiran
+    graph_diameter = "N/A"
 
 # connected components
 num_components = nx.number_weakly_connected_components(G)

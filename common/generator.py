@@ -1,7 +1,8 @@
 from common.common import draw_graph
 from common.imports import *
-import random
-import community as community_louvain  # Louvain metoda
+from common.globals import *
+
+import community as community_louvain
 
 # Function for generating randowm network
 # Input: number of graphs, number of nodes, probability
