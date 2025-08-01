@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="0cb1a8fa-fa5e-4830-888e-2d4b32ae9abd" name="Changes" comment="add statistics">
+      <change afterPath="$PROJECT_DIR$/common/benchmark.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/run_analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/run/run_statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/run/run_statistics.py" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Python Script" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2o3XwJdNi2IRa3b72G1wyoUiK8O" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Python.analyse.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_citation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_erdos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_eu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_eu_directed.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_neuro.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_twitter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analyse_zachary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.betweeness_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.closensess_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.cluster.executor&quot;: &quot;Run&quot;,
+    &quot;Python.common.executor&quot;: &quot;Run&quot;,
+    &quot;Python.community.executor&quot;: &quot;Run&quot;,
+    &quot;Python.community_detection.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compare.executor&quot;: &quot;Run&quot;,
+    &quot;Python.compare_modularity.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_random_graph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.create_random_graph_clusters.executor&quot;: &quot;Run&quot;,
+    &quot;Python.deepwalk.executor&quot;: &quot;Run&quot;,
+    &quot;Python.degree_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.detect.executor&quot;: &quot;Run&quot;,
+    &quot;Python.eigen_spectral.executor&quot;: &quot;Run&quot;,
+    &quot;Python.erdos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.eu_analyse_mod.executor&quot;: &quot;Run&quot;,
+    &quot;Python.final_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.generator.executor&quot;: &quot;Run&quot;,
+    &quot;Python.globals.executor&quot;: &quot;Run&quot;,
+    &quot;Python.graph_stats.executor&quot;: &quot;Run&quot;,
+    &quot;Python.graphs.executor&quot;: &quot;Run&quot;,
+    &quot;Python.igraph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.imports.executor&quot;: &quot;Run&quot;,
+    &quot;Python.inout_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.interactive.executor&quot;: &quot;Run&quot;,
+    &quot;Python.intro.executor&quot;: &quot;Run&quot;,
+    &quot;Python.katz_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.label_propagation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.large.executor&quot;: &quot;Run&quot;,
+    &quot;Python.large_twitter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.louvain.executor&quot;: &quot;Run&quot;,
+    &quot;Python.louvain_detection.executor&quot;: &quot;Run&quot;,
+    &quot;Python.neuro_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.node2vec.executor&quot;: &quot;Run&quot;,
+    &quot;Python.node2vec_cd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.pagerank_centrality.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random_walk.executor&quot;: &quot;Run&quot;,
+    &quot;Python.random_walk_cd.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_analysis.executor&quot;: &quot;Run&quot;,
+    &quot;Python.run_statistics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.sbm.executor&quot;: &quot;Run&quot;,
+    &quot;Python.smallworld.executor&quot;: &quot;Run&quot;,
+    &quot;Python.statistics.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_citation.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_erdos.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_eu.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_neuro.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_twitter.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stats_zachary.executor&quot;: &quot;Run&quot;,
+    &quot;Python.stohastic_block_model.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_communities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_communities_graph.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_communities_largest.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_communities_seperate.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_communitiesv2.executor&quot;: &quot;Run&quot;,
+    &quot;Python.twitter_overall_communities.executor&quot;: &quot;Run&quot;,
+    &quot;Python.visualise.executor&quot;: &quot;Run&quot;,
+    &quot;Python.zachary.executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;last_opened_file_path&quot;: &quot;/Users/robipritrznik/PycharmProjects/community-detection&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;
+  }
+}</component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$" />
+      <recent name="$PROJECT_DIR$/research/statistics_analysis/basic_statistics" />
+      <recent name="$PROJECT_DIR$/visualisations" />
+      <recent name="$PROJECT_DIR$/common" />
+      <recent name="$PROJECT_DIR$/research/directed" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/local" />
+      <recent name="$PROJECT_DIR$/research" />
+      <recent name="$PROJECT_DIR$/run" />
+      <recent name="$PROJECT_DIR$/research/statistics_analysis/results" />
+      <recent name="$PROJECT_DIR$/misc" />
+    </key>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-python-sdk-98f27166c754-ba05f1cad1b1-com.jetbrains.pycharm.community.sharedIndexes.bundled-PC-242.21829.153" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="0cb1a8fa-fa5e-4830-888e-2d4b32ae9abd" name="Changes" comment="" />
+      <created>1730099469979</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1730099469979</updated>
+    </task>
+    <task id="LOCAL-00001" summary="add statistics">
+      <option name="closed" value="true" />
+      <created>1742981309875</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1742981309875</updated>
+    </task>
+    <option name="localTasksCounter" value="2" />
+    <servers />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="add statistics" />
+    <option name="LAST_COMMIT_MESSAGE" value="add statistics" />
+  </component>
+</project>
