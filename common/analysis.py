@@ -7,6 +7,7 @@ import pandas as pd
 import time
 from common.statistics import get_stats
 from common.community import visualise_louvain
+
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities
 # Returns: Average density, Average degree, Average clustering coefficient
@@ -95,47 +96,52 @@ def evaluate(method_name, func, is_cdlib=False, *args, **kwargs):
             "Execution Time (s)": exec_time,
         }
 
-
+# Function reading directed graph
+# Input: graph/file, seperator, skip header rows
+# Returns: Graph object
 def open_graph_directed(graph=None, file=None, sep="\t", skip=4):
+    # open graph by file or provided as Graph object
     if file:
-        # Preberemo datoteko in preverimo njeno strukturo
-        #df = pd.read_csv(file, sep=sep, header=None, names=["Node1", "Node2", "Weight"])
+        # read file and structure
         df = pd.read_csv(file, sep="\s+", header=None, skiprows=skip, names=["Node1", "Node2"])
 
-        print(df.head())  # Prikaže prvih 5 vrstic
-        print(df.info())  # Prikaže strukturo podatkov (stolpci, tipi podatkov)
-        # Preverimo, ali stolpec 'Weight' obstaja (če ne, ga odstranimo iz grafa)
+        # print head and info
+        print(df.head())
+        print(df.info())
+
+        # check if graph is directed
         if "Weight" in df.columns:
-            G = nx.from_pandas_edgelist(df, source="Node1", target="Node2", edge_attr="Weight",
-                                        create_using=nx.DiGraph())
+            G = nx.from_pandas_edgelist(df, source="Node1", target="Node2", edge_attr="Weight", create_using=nx.DiGraph())
         else:
             G = nx.from_pandas_edgelist(df, source="Node1", target="Node2", create_using=nx.DiGraph())
-
     elif graph:
         G = graph
     else:
-        raise ValueError("Noben graf ali datoteka ni podana!")
+        raise ValueError("No graph or file provided!")
 
     # Preverimo osnovne informacije o grafu
-    print(f"Prebran graf: {len(G.nodes())} vozlišč, {len(G.edges())} povezav")
+    print(f"Read graph: {len(G.nodes())} vertices, {len(G.edges())} edges")
     return G
 
+# Function reading undirected graph
+# Input: graph/file, seperator
+# Returns: Graph object
 def open_graph(graph, file, sep = '\t'):
-    # import data if file path is set
+    # import data if file path is provied
     if file:
         df = open_txt(file, sep)
         # create graph
         G = nx.from_pandas_edgelist(df, source='Node1', target='Node2', edge_attr='Weight')
 
-    # read graph if graph is set
+    # read graph if graph is provided
     if graph:
         G = graph
     return G
+
 # Function for network analysis of community algorithms
-# Input: Graph G or file path
+# Input: Graph G or file path, seperator, directed flag
 # Returns: DataFrame of comparision results
 def network_analysis(graph, file, sep = '\t', directed = False):
-
     # import data if file path is set
     if file:
         df = open_txt(file, sep)
@@ -148,17 +154,18 @@ def network_analysis(graph, file, sep = '\t', directed = False):
     # read graph if graph is set
     if graph:
         G = graph
-    # Print network statistics
-    stats(G)
-    get_stats(G)
+    # Print network statistics uncomment needed stats
+    #stats(G)
+    #get_stats(G)
     #visualise_louvain(G)
+
     # results frame
     results = []
 
     results.append(evaluate("Louvain", nx.community.louvain_communities, False, G))
-    if not G.is_directed():
-        results.append(evaluate("Label Propagation", nx.community.label_propagation_communities, False, G))
-    results.append(evaluate("Fast Label Propagation", nx.community.fast_label_propagation_communities, False, G))
+    #if not G.is_directed():
+    #    results.append(evaluate("Label Propagation", nx.community.label_propagation_communities, False, G))
+    #results.append(evaluate("Fast Label Propagation", nx.community.fast_label_propagation_communities, False, G))
     results.append(evaluate("Leiden", leiden, True, G))
     results.append(evaluate("Infomap", infomap, True, G))
     #results.append(evaluate("Walktrap", walktrap, True, G))

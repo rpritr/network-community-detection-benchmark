@@ -2,7 +2,7 @@ from common.imports import *
 import community as community_louvain  # Louvain metoda
 from common.analysis import draw_graph
 
-# Function forfiltering components
+# Function for filtering components
 # Input: components of graph, limit
 # Returns: filtered components
 def filter_components(components, limit):
@@ -63,15 +63,17 @@ def contract_communities(G, communities, weight_attr='Weight'):
     return H
 
 
+# Function for visualising louvain community detection
+# Input: Graph G
 def visualise_louvain(G):
-    # 5. Detekcija skupnosti
+    # community detection
     partition = community_louvain.best_partition(G)
 
-    # 6. Barvanje grafa
+    # graph coloring
     unique_communities = list(set(partition.values()))
     cmap = plt.cm.get_cmap("tab10", len(unique_communities))
     community_colors = {comm: cmap(i) for i, comm in enumerate(unique_communities)}
     node_colors = [community_colors[partition[node]] for node in G.nodes]
 
-    # 7. Prikaz grafa z barvanimi skupnostmi
-    draw_graph(G, "ER detekcija skupnosti", node_colors, with_labels=False, node_size=40)
+    # draw graph
+    draw_graph(G, "Louvain community detection", node_colors, with_labels=False, node_size=40)

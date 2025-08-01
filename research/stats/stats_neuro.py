@@ -53,6 +53,10 @@ except nx.NetworkXError:
 # Število povezanih komponent
 num_components = nx.number_weakly_connected_components(G)
 
+density = nx.density(G)
+
+mean_edges = np.mean([d for n, d in G.degree()])
+
 # Izpis rezultatov
 print("Število vozlišč:", num_nodes)
 print("Število povezav:", num_edges)
@@ -70,3 +74,7 @@ print("Povprečni koeficient gručenja (usmerjen graf):", avg_clustering_directe
 print("Povprečni koeficient gručenja (neusmerjen graf):", avg_clustering_undirected)
 triangles = sum(nx.triangles(G.to_undirected()).values()) // 3
 print("Število trikotnikov:", triangles)
+print("Gostota:", nx.density(G))
+print("Povprecna stopnja vozlisca:", np.mean([d for n, d in G.degree()]))
+
+print("Polmer :", nx.radius(G))

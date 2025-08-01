@@ -70,3 +70,7 @@ print("Povprečni koeficient gručenja (usmerjen graf):", avg_clustering_directe
 print("Povprečni koeficient gručenja (neusmerjen graf):", avg_clustering_undirected)
 triangles = sum(nx.triangles(G.to_undirected()).values()) // 3
 print("Število trikotnikov:", triangles)
+
+print("Gostota:", nx.density(G))
+print("Povprecna stopnja vozlisca:", np.mean([d for n, d in G.degree()]))
+print("Polmer :", nx.radius(G))

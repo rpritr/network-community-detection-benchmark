@@ -6,7 +6,6 @@ import community as community_louvain  # Louvain metoda
 # Function for generating randowm network
 # Input: number of graphs, number of nodes, probability
 # Returns: random graph
-
 def generate_random_network(num=5, nodes=10, prob=0.5):
     # number of iterations
     num_subgraphs = num

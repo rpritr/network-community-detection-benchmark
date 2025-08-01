@@ -80,3 +80,8 @@ print("Število povezav v največji SCC:", num_edges_scc)
 print("Povprečni koeficient gručenja:", avg_clustering)
 print("Diameter:", graph_diameter)
 print("Število povezanih komponent:", num_components)
+print("Gostota:", nx.density(G))
+print("Povprecna stopnja vozlisca:", np.mean([d for n, d in G.degree()]))
+triangles = sum(nx.triangles(G.to_undirected()).values()) // 3
+print("Število trikotnikov:", triangles)
+print("Polmer :", nx.radius(G))
