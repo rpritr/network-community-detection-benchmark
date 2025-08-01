@@ -5,89 +5,14 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cb1a8fa-fa5e-4830-888e-2d4b32ae9abd" name="Changes" comment="add statistics">
-      <change afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_citation.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_citation.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_erdos.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_erdos.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_eu.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_eu.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_neuro.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_neuro.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_twitter.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_twitter.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/analyse_zachary.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_zachary.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/community_detection_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/examples/community_detection_results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/directed/analyse_eu_directed.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/directed/analyse_eu_directed.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/directed/community_detection_results.csv" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/directed/community_detection_results.csv" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/final_analysis.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/graph_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/graph_stats.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/comparision/compare.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/comparision/compare.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/comparision/compare_modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/comparision/compare_modularity.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/data/zachary.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/community_detection_results.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/community_detection_statistics_per_method.csv" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/1num_communities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/2max_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/3avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/5modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/6avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/7avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu/merged.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/max_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/eu_directed/modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/1num_communities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/2.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/3avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/4modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/5avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/6avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/neuro/merged.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/1num_communities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/2max_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/3avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/4modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/5avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/6avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/random/merged.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/1num_communities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/2max_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/3avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/4modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/5avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/6avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/Thumbs.db" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/x/merged.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/avg_clustering.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/avg_degree.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/avg_density.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/avg_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/exec_time.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/max_size.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/merged.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/modularity.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/results/zachary/num_communities.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/statistics_analysis/run_statistics.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_citation.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_erdos.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_eu.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_neuro.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_twitter.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/stats/stats_zachary.py" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/research/visualise.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/analysis_custom_leiden.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/community.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/globals.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/globals.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/imports.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/statistics.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_erdos.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/network_analysis/undirected/analyse_erdos.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

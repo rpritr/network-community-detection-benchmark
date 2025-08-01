@@ -1,8 +1,5 @@
 from common.imports import *
 import networkx as nx
-import matplotlib.pyplot as plt
-
-from common.generator import GraphGenerator
 
 # Ustvarimo graf
 def get_stats(G):
