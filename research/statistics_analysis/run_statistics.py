@@ -1,10 +1,5 @@
-import pandas as pd
-import numpy as np
-import networkx as nx
-from common.analysis import evaluate, network_analysis
-import matplotlib.pyplot as plt
-import seaborn as sns
-from common.generator import generate_random_network
+from common.imports import *
+from common.globals import *
 
 # set number of iterations
 num_iterations = 100
@@ -12,7 +7,6 @@ num_iterations = 100
 # results array
 all_results = []
 #G = nx.karate_club_graph()
-#G = generate_random_network(15)
 
 # run analysis
 for i in range(num_iterations):

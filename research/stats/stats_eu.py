@@ -1,9 +1,7 @@
 from common.imports import *
-import networkx as nx
-import matplotlib.pyplot as plt
-from common.analysis import draw_graph
-from common.generator import generate_random_network
+from common.globals import *
 from common.analysis import open_graph_directed
+
 # Ustvarimo graf
 G = open_graph_directed(None, "../../data/eu/email-EuAll.txt")
 

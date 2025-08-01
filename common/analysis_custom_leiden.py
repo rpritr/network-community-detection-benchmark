@@ -6,7 +6,6 @@ from common.common import draw_graph, draw_dendrogram, stats, open_txt
 import pandas as pd
 import time
 from common.statistics import get_stats
-from common.community import visualise_louvain
 import igraph as ig
 import leidenalg
 # Function for detecting community characteristigs

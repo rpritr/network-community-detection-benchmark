@@ -1,8 +1,6 @@
 from common.imports import *
+from common.globals import *
 import networkx as nx
-import matplotlib.pyplot as plt
-from common.analysis import draw_graph
-from common.generator import generate_random_network
 from common.analysis import open_graph
 # Ustvarimo graf
 G = open_graph(None, "../../data/neuro/average_connectivity_condition_1.txt", " ")

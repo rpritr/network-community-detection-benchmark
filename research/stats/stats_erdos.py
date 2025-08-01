@@ -1,12 +1,11 @@
 from common.imports import *
-import networkx as nx
-import matplotlib.pyplot as plt
-from common.analysis import draw_graph
-from common.generator import generate_random_network
+from common.globals import *
+
+from common.generator import GraphGenerator
 
 # Ustvarimo graf
-G = generate_random_network(15)
-
+gen = GraphGenerator(num_subgraphs=4, nodes_per_subgraph=15, edge_prob=0.3)
+G = gen.generate()
 # Zagotovimo, da je usmerjen
 if not nx.is_directed(G):
     G = nx.DiGraph(G)

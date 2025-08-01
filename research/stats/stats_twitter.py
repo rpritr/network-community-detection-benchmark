@@ -1,9 +1,7 @@
 from common.imports import *
-import networkx as nx
-import matplotlib.pyplot as plt
-from common.analysis import draw_graph
-from common.generator import generate_random_network
+from common.globals import *
 from common.analysis import open_graph_directed, open_graph
+
 # Ustvarimo graf
 G = open_graph(None, "../../data/FakeNews-2010_Retweets_Graph.txt")
 

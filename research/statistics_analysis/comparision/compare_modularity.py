@@ -1,12 +1,6 @@
-import pandas as pd
-import numpy as np
-import networkx as nx
-from common.analysis import evaluate, network_analysis
-import matplotlib.pyplot as plt
-import seaborn as sns
-from common.generator import generate_random_network
-import pandas as pd
-import matplotlib.pyplot as plt
+from common.imports import *
+from common.globals import *
+
 
 # Podatki o modularnosti algoritmov na različnih omrežjih
 modularity_data = {

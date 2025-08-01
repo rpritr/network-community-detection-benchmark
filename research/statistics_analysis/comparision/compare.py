@@ -1,10 +1,5 @@
-import pandas as pd
-import numpy as np
-import networkx as nx
-from common.analysis import evaluate, network_analysis
-import matplotlib.pyplot as plt
-import seaborn as sns
-from common.generator import generate_random_network
+from common.imports import *
+from common.globals import *
 
 
 data_final = {
