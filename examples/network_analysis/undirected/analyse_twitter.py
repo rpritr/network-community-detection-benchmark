@@ -4,8 +4,7 @@ from common.globals import *
 
 from common.analysis import network_analysis
 
-# do analysis on EU communication network
-results = network_analysis(None, "../data/eu/email-EuAll.txt")
-
+# do analysis on X network
+results = network_analysis(None, "../../../data/FakeNews-2010_Retweets_Graph.txt")
 print(results)
 
