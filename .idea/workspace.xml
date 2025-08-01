@@ -5,8 +5,11 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="0cb1a8fa-fa5e-4830-888e-2d4b32ae9abd" name="Changes" comment="add statistics">
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/common/network.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/analysis.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/analysis.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/common.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/common.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/common/generator.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/generator.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/imports.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/imports.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/common/statistics.py" beforeDir="false" afterPath="$PROJECT_DIR$/common/statistics.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/examples/graph_stats.py" beforeDir="false" afterPath="$PROJECT_DIR$/examples/graph_stats.py" afterDir="false" />

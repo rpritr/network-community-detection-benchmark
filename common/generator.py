@@ -1,7 +1,5 @@
 from common.imports import *
 from common.globals import *
-import networkx as nx
-import random
 
 # Class for generating randowm network
 # Input: number of graphs, number of nodes, probability

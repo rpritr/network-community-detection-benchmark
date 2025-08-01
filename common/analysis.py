@@ -1,6 +1,5 @@
 from common.imports import *
 from common.globals import *
-from common.common import open_txt
 
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities
@@ -116,6 +115,32 @@ def open_graph_directed(graph=None, file=None, sep="\t", skip=4):
     # Preverimo osnovne informacije o grafu
     print(f"Read graph: {len(G.nodes())} vertices, {len(G.edges())} edges")
     return G
+
+# Function for reading graph from txt
+# Input: txt path
+# Returns: df datatype for CSV
+def open_txt(path, sep):
+    # Preberemo datoteko brez določanja števila stolpcev
+    df = pd.read_csv(
+        path,
+        sep=sep, # seperator in CSV file
+        comment="#",  # ignore comments in file
+        header=None  # no header in file
+    )
+
+    # check if weight exists
+    if df.shape[1] == 2:
+        df.columns = ['Node1', 'Node2']
+        df['Weight'] = 1  # default length for weighted graph
+    elif df.shape[1] == 3:
+        df.columns = ['Node1', 'Node2', 'Weight']
+    else:
+        raise ValueError("File does not have required columns, 3 columns required.")
+
+    # convert into right types
+    df = df.astype({'Node1': int, 'Node2': int, 'Weight': int})
+
+    return df
 
 # Function reading undirected graph
 # Input: graph/file, seperator

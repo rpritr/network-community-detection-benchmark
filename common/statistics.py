@@ -1,4 +1,4 @@
-import networkx as nx
+from common.globals import *
 
 class GraphStats:
     def __init__(self, graph):
@@ -10,6 +10,8 @@ class GraphStats:
         self.stats["num_nodes"] = len(G.nodes())
         self.stats["num_edges"] = len(G.edges())
         self.stats["density"] = nx.density(G)
+        self.stats["triangles"] = sum(nx.triangles(G.to_undirected()).values()) // 3
+        self.stats["avg_node_degree"] = np.mean([d for n, d in G.degree()])
 
         if nx.is_directed(G):
             wcc = max(nx.weakly_connected_components(G), key=len)
@@ -61,7 +63,9 @@ class GraphStats:
             "avg_clustering": "Average Clustering Coeficient: ",
             "diameter": "Diameter: ",
             "radius": "Radius: ",
-            "num_components": "Connected Components: "
+            "triangles": "Triangles: ",
+            "avg_node_degree": "Average Node Degree: ",
+            "num_components" : "Connected Components: "
         }
 
         for key, value in self.stats.items():

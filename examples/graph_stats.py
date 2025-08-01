@@ -1,11 +1,12 @@
 from common.imports import *
 from common.globals import *
 
-from common.analysis import open_graph_directed
+from common.network import NetworkManager
 from common.statistics import GraphStats
 
 # read graph
-G = open_graph_directed(None, "../data/neuro/average_connectivity_condition_1.txt")
+nm = NetworkManager(file_path="../data/neuro/average_connectivity_condition_1.txt", directed=True, skiprows=4)
+G = nm.get_graph()
 
 stats = GraphStats(G)
 stats.compute()         # izračuna statistike in jih shrani v .stats
