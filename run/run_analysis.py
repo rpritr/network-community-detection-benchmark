@@ -1,4 +1,4 @@
-
+from common.analysis import CommunityAnalysis
 from common.imports import *
 from common.globals import *
 from common.generator import GraphGenerator
@@ -10,6 +10,5 @@ G = gen.generate()
 viz = GraphVisualizer(G)
 viz.draw_graph("Graph G", node_color="lightblue", with_labels=False, node_size=40)
 
-# do analysis on network
-results = network_analysis(G, None)
-print(results.to_string())
+ca = CommunityAnalysis(graph=G)
+df = ca.run()
