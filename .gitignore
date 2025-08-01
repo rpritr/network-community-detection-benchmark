@@ -1,5 +1,6 @@
 data/*
-misc/*
+local/misc/*
 ./idea
 */__pycache__/*
 common/__pycache__/*
+local/*

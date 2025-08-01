@@ -14,7 +14,7 @@ for i in range(num_iterations):
     #results = network_analysis(G, None)
     #results = network_analysis(None, "../../data/neuro/average_connectivity_condition_1.txt", " ")
     #results = network_analysis(None, "../../data/FakeNews-2010_Retweets_Graph.txt")
-    results = network_analysis(None, "./data/eu/email-EuAll.txt", directed=True)
+    results = network_analysis(None, "../data/eu/email-EuAll.txt", directed=True)
     #results = network_analysis(None, "../../data/citation/cit-Patents.txt")
 
     all_results.append(results)

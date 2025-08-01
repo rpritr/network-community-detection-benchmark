@@ -4,7 +4,7 @@ from common.globals import *
 from common.generator import generate_random_network
 from common.analysis import open_graph_directed
 # read graph
-G = open_graph_directed(None, "./data/citation/cit-Patents.txt")
+G = open_graph_directed(None, "../data/eu/email-EuAll.txt")
 
 # check if directed
 if not nx.is_directed(G):

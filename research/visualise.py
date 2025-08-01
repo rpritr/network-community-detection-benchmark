@@ -1,6 +1,6 @@
 import networkx as nx
 
-from common.common import open_txt, draw_network
+from common.common import draw_network
 from common.community import contract_communities, get_community_colors, filter_components
 from common.imports import *
 from cdlib.algorithms import leiden
