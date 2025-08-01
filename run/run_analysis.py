@@ -1,4 +1,5 @@
 from common.analysis import CommunityAnalysis
+from common.benchmark import CommunityBenchmark
 from common.imports import *
 from common.globals import *
 from common.generator import GraphGenerator
@@ -10,5 +11,7 @@ G = gen.generate()
 viz = GraphVisualizer(G)
 viz.draw_graph("Graph G", node_color="lightblue", with_labels=False, node_size=40)
 
-ca = CommunityAnalysis(graph=G)
+ca = CommunityBenchmark(graph=G)
 df = ca.run()
+ca.summarize()
+ca.plot_all()

@@ -1,3 +1,4 @@
+from common.analysis import CommunityAnalysis
 from common.globals import *
 from common.imports import *
 
@@ -11,10 +12,11 @@ class CommunityBenchmark:
         self.results = []
 
     def run(self):
-        from common.support import network_analysis  # importamo lokalno da se izognemo krožni odvisnosti
+
         for i in range(self.iterations):
             print(f"Running iteration {i + 1}/{self.iterations} ...")
-            result = network_analysis(self.graph, self.file_path, self.sep, self.directed)
+            ca = CommunityAnalysis(graph=self.graph)
+            result = ca.run()
             self.results.append(result)
 
         self.df = pd.concat(self.results, ignore_index=True)
