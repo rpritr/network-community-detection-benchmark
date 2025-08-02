@@ -1,4 +1,3 @@
-
 from common.globals import *
 
 class NetworkManager:

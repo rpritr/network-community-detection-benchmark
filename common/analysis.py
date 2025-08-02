@@ -83,7 +83,6 @@ class CommunityAnalysis:
             "Fast Label Propagation": (nx.community.fast_label_propagation_communities, False),
             "Walktrap": (walktrap, True),
             "Greedy Modularity": (greedy_modularity_communities, False),
-            # Dodaj druge metode po potrebi
         }
 
         for name in algorithms:
@@ -93,10 +92,7 @@ class CommunityAnalysis:
             func, is_cdlib = available_algorithms[name]
             self.results.append(self.evaluate(name, func, is_cdlib))
 
-
-
         # convert into DataFrame and export to CSV
         pd.DataFrame(self.results).to_csv("community_detection_results.csv", index=False)
 
         return pd.DataFrame(self.results)
-

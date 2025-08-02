@@ -1,6 +1,3 @@
-from common.imports import *
-from common.globals import *
-
 from common.network import NetworkManager
 from common.statistics import GraphStats
 
@@ -9,5 +6,5 @@ nm = NetworkManager(file_path="../data/neuro/average_connectivity_condition_1.tx
 G = nm.get_graph()
 
 stats = GraphStats(G)
-stats.compute()         # izračuna statistike in jih shrani v .stats
-stats.print_summary()   # izpiše lepo prevedene rezultate
+stats.compute()         # compute graph stats
+stats.print_summary()   # print graph stats summary

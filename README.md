@@ -1,7 +1,7 @@
 # 🕸️ Community Detection in Graphs
 
 A Python project for analyzing network structures and detecting communities using various algorithms such as **Louvain**, **Leiden**, **Infomap**, and others.  
-The project supports both **directed and undirected graphs**, and computes statistical properties, performs community detection, and outputs results for comparative evaluation.
+The project supports both **directed and undirected graphs**, computes network statistics, detects communities, and exports comparative evaluation results.
 
 ---
 
@@ -29,13 +29,13 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-### 2. Run an example script
+### 2. Run community detection example
 
 ```bash
 python -m run.run_statistics
 ```
 
-Or to perform full community detection benchmarking:
+Or run the full benchmarking with configurable algorithms:
 
 ```bash
 python -m run.run_analysis
@@ -45,7 +45,7 @@ python -m run.run_analysis
 
 ## 🔧 Features
 
-- Load graphs from edge list text files
+- Load graphs from edge list text files (directed or undirected)
 - Compute network statistics:
   - Node and edge count
   - Largest WCC/SCC components
@@ -55,13 +55,47 @@ python -m run.run_analysis
   - Louvain
   - Leiden
   - Infomap
+  - Walktrap
   - Girvan-Newman
   - Greedy modularity
-  - Walktrap
+  - Label Propagation
+  - Fast Label Propagation
 - Graph visualization (with Matplotlib / NetworkX)
 - Export results to CSV for analysis and comparison
 
 ---
+
+## Community Analysis
+
+You can instantiate and run custom analyses as follows:
+
+```
+from common.cd_analysis import CommunityAnalysis
+
+ca = CommunityAnalysis(graph=G)  # or file="data/graph.txt"
+df = ca.run(algorithms=["Louvain", "Infomap"])
+```
+
+Supported algorithms:
+```
+["Louvain", "Leiden", "Infomap", "Girvan Newman", "Greedy Modularity", "Walktrap", "Label Propagation", "Fast Label Propagation"]
+```
+
+---
+
+## Community Benchmark
+
+You can run a full benchmark on 100 iterations as follows:
+
+```
+from common.cd_analysis import CommunityBenchmark
+
+ca = CommunityBenchmark(graph=G)  # or file="data/graph.txt"
+df = ca.run()
+ca.summarize()
+ca.plot_all() # plot and export analysis graph
+```
+
 
 ## Sample Datasets
 

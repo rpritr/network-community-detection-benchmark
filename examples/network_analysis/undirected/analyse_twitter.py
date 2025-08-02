@@ -1,8 +1,8 @@
+from common.analysis import CommunityAnalysis
+from common.network import NetworkManager
 
-from common.imports import *
-from common.globals import *
+nm = NetworkManager(file_path="../../../data/FakeNews-2010_Retweets_Graph.txt", skiprows=4)
+G = nm.get_graph()
 
-# do analysis on X network
-results = network_analysis(None, "../../../data/FakeNews-2010_Retweets_Graph.txt")
-print(results)
-
+ca = CommunityAnalysis(graph=G)
+df = ca.run(["Label Propagation", "Fast Label Propagation", "Leiden"])

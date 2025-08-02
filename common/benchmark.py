@@ -1,6 +1,5 @@
 from common.analysis import CommunityAnalysis
 from common.globals import *
-from common.imports import *
 
 class CommunityBenchmark:
     def __init__(self, file_path=None, graph=None, sep="\t", directed=False, iterations=100):

@@ -1,9 +1,8 @@
+from common.analysis import CommunityAnalysis
+from common.network import NetworkManager
 
-from common.imports import *
-from common.globals import *
+nm = NetworkManager(file_path="../../../data/eu/email-EuAll.txt", directed=True, skiprows=4)
+G = nm.get_graph()
 
-# do analysis on EU communication network
-results = network_analysis(None, "../../../data/eu/email-EuAll.txt", directed=True)
-
-print(results)
-
+ca = CommunityAnalysis(graph=G)
+df = ca.run()

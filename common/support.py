@@ -1,8 +1,6 @@
 from common.imports import *
 from common.globals import *
 
-
-
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities
 # Returns: Average density, Average degree, Average clustering coefficient

@@ -1,4 +1,3 @@
-from common.imports import *
 from common.globals import *
 
 # Class for generating randowm network
@@ -46,4 +45,3 @@ class GraphGenerator:
                     final_graph.add_edge(node_a, node_b)
 
         return final_graph
-    
