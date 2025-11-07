@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+
+[project]
+name = "cd-benchmark"
+version = "0.1.0"
+description = "Community Detection Benchmark: NetworkX/igraph/CDlib"
+readme = "README.md"
+license = { text = "MIT" }  # ali SPDX: "MIT"
+requires-python = ">=3.9"
+authors = [
+  { name="Robi Pritržnik", email="robi@steerscape.com" }
+]
+keywords = ["community detection", "networks", "graph", "benchmark", "cdlib", "networkx", "igraph"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Information Analysis"
+]
+
+dependencies = [
+  "networkx>=2.8",
+  "pandas>=1.5",
+  "numpy>=1.23",
+  "cdlib>=0.3.0",
+  "python-igraph>=0.10",
+]
+
+[project.optional-dependencies]
+viz = ["matplotlib>=3.6", "pyvis>=0.3.2"]
+
+[project.urls]
+Homepage = "https://github.com/rpritr/network-community-detection-benchmark"
+Issues = "https://github.com/rpritr/network-community-detection-benchmark/issues"
