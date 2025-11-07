@@ -26,6 +26,8 @@ dependencies = [
   "numpy>=1.23",
   "cdlib>=0.3.0",
   "python-igraph>=0.10",
+  "leidenalg==0.10.2",
+  "igraph==0.11.6",
 ]
 
 [project.optional-dependencies]
