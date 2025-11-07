@@ -10,12 +10,12 @@ class CommunityBenchmark:
         self.iterations = iterations
         self.results = []
 
-    def run(self):
+    def run(self, algorithms=None):
 
         for i in range(self.iterations):
             print(f"Running iteration {i + 1}/{self.iterations} ...")
             ca = CommunityAnalysis(graph=self.graph)
-            result = ca.run()
+            result = ca.run(algorithms=algorithms)
             self.results.append(result)
 
         self.df = pd.concat(self.results, ignore_index=True)
@@ -56,3 +56,22 @@ class CommunityBenchmark:
         ]
         for metric, title, filename, *log in plots:
             self.plot_violin(metric, title=title, ylabel=title, save_as=filename, logscale=log[0] if log else False)
+
+    def visualize_by_method(self, method, how="max", metric="Modularity", **kwargs):
+        """
+        Najde vrstico v self.results za dano metodo (največja ali najmanjša vrednost metric)
+        in nariše pripadajočo particijo.
+        """
+        if not self.results:
+            raise RuntimeError("No results yet. Run algorithms first.")
+
+        df = pd.DataFrame(self.results)
+        sub = df[df["Method"] == method]
+        if sub.empty:
+            raise ValueError(f"No rows for method '{method}'.")
+
+        row = sub.loc[sub[metric].idxmax()] if how == "max" else sub.loc[sub[metric].idxmin()]
+        pidx = int(row["partition_index"])
+        title = f"{method} — {how} {metric} ({row[metric]:.4f})" if row.get(metric) is not None else f"{method}"
+
+        self.visualize(idx=pidx, title=title, **kwargs)
