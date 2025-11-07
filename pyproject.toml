@@ -34,3 +34,7 @@ viz = ["matplotlib>=3.6", "pyvis>=0.3.2"]
 [project.urls]
 Homepage = "https://github.com/rpritr/network-community-detection-benchmark"
 Issues = "https://github.com/rpritr/network-community-detection-benchmark/issues"
+
+
+[tool.hatch.build.targets.wheel]
+packages = ["common"]
