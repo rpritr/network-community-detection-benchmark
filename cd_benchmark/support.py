@@ -1,5 +1,5 @@
-from common.imports import *
-from common.globals import *
+from cd_benchmark.imports import *
+from cd_benchmark.globals import *
 
 # Function for detecting community characteristigs
 # Input: Graph G, iter: communities

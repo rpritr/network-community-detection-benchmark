@@ -1,6 +1,6 @@
-from common.support import open_graph, community_characteristics
-from common.imports import *
-from common.globals import *
+from cd_benchmark.support import open_graph, community_characteristics
+from cd_benchmark.imports import *
+from cd_benchmark.globals import *
 
 class CommunityAnalysis:
     def __init__(self, graph=None, file=None, sep='\t', directed=False):

@@ -39,4 +39,4 @@ Issues = "https://github.com/rpritr/network-community-detection-benchmark/issues
 
 
 [tool.hatch.build.targets.wheel]
-packages = ["common"]
+packages = ["cd_benchmark"]

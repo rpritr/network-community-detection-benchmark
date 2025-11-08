@@ -1,5 +1,5 @@
-from common.analysis import CommunityAnalysis
-from common.globals import *
+from cd_benchmark.analysis import CommunityAnalysis
+from cd_benchmark.globals import *
 
 class CommunityBenchmark:
     def __init__(self, file_path=None, graph=None, sep="\t", directed=False, iterations=100):

@@ -1,4 +1,4 @@
-from common.globals import *
+from cd_benchmark.globals import *
 
 class NetworkManager:
     def __init__(self, file_path=None, graph=None, directed=False, sep="\s+", skiprows=0, has_weights=False):

@@ -1,4 +1,4 @@
-from common.globals import *
+from cd_benchmark.globals import *
 
 # Class for generating randowm network
 # Input: number of graphs, number of nodes, probability

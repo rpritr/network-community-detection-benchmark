@@ -5,3 +5,4 @@ local/misc/*
 */__pycache__/*
 common/__pycache__/*
 local/*
+.venv*

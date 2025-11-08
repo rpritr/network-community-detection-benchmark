@@ -1,4 +1,4 @@
-from common.globals import *
+from cd_benchmark.globals import *
 
 class GraphStats:
     def __init__(self, graph):
