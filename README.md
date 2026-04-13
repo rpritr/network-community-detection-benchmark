@@ -8,7 +8,7 @@ The project supports both **directed and undirected graphs**, computes network s
 ## 📁 Project Structure
 
 ```
-community-detection/
+network-community-detection-benchmark/
 ├── cd_benchmark/       # Core modules for analysis, detection, statistics, visualization
 ├── run/                # Executable scripts (entry points)
 ├── data/               # Input graph datasets
@@ -34,7 +34,7 @@ pip install cd-benchmark
 
 ```bash
 git clone https://github.com/rpritr/network-community-detection-benchmark.git
-cd community-detection
+cd network-community-detection-benchmark
 pip install -e .
 ```
 
