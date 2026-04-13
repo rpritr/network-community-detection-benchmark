@@ -1,6 +1,6 @@
-from common.analysis import CommunityAnalysis
-from common.visualization import GraphVisualizer
-from common.generator import GraphGenerator
+from cd_benchmark.analysis import CommunityAnalysis
+from cd_benchmark.visualization import GraphVisualizer
+from cd_benchmark.generator import GraphGenerator
 
 gen = GraphGenerator(num_subgraphs=4, nodes_per_subgraph=15, edge_prob=0.3)
 G = gen.generate()

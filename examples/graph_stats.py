@@ -1,5 +1,5 @@
-from common.network import NetworkManager
-from common.statistics import GraphStats
+from cd_benchmark.network import NetworkManager
+from cd_benchmark.statistics import GraphStats
 
 # read graph
 nm = NetworkManager(file_path="../data/neuro/average_connectivity_condition_1.txt", directed=True, skiprows=4)

@@ -1,5 +1,5 @@
 import networkx as nx
-from common.analysis import CommunityAnalysis
+from cd_benchmark.analysis import CommunityAnalysis
 
 G = nx.karate_club_graph()
 
